@@ -5,10 +5,17 @@ import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 
 function App() {
-  const [mode, setMode] = useState("light"); // whether dark mode is enabled or not
+  const [mode, setMode] = useState("light");
+  const toggleMode = () => {
+    if (mode === "light") {
+      setMode("dark");
+    } else {
+      setMode("light");
+    }
+  };
   return (
     <>
-      <Navbar title="promoCodes" mode={mode} />
+      <Navbar title="promoCodes" modes={mode} toggleMode={toggleMode} />
       <TextForm heading="Enter the text to analyse below" />
       {/* <About /> */}
     </>
