@@ -48,13 +48,13 @@ export default function TextForm(props) {
               Convert to Lowecase
             </button>
             <button className="btn btn-primary me-3" onClick={handleToClear}>
-              Clear textarea
+              Clear Text
             </button>
             <button className="btn btn-primary me-3" onClick={handleCopy}>
               Copy Text
             </button>
             <button className="btn btn-primary me-3" onClick={handleExtraSpace}>
-              Remove extra space
+              Remove Extra Space
             </button>
           </div>
         </div>
