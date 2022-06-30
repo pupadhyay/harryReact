@@ -125,7 +125,7 @@ export default function About() {
                   classes control the overall appearance, as well as the showing
                   and hiding via CSS transitions. You can modify any of this
                   with custom CSS or overriding our default variables. It's also
-                  worth noting that just about any HTML can go within the{" "}
+                  worth noting that just about any HTML can go within the
                   <code>.accordion-body</code>, though the transition does limit
                   overflow.
                 </div>
@@ -138,7 +138,7 @@ export default function About() {
         <div className="col">
           <button
             type="button"
-            className="btn btn-primary my-3 "
+            className="btn btn-dark my-3"
             onClick={ChangeThemeMode}
           >
             {btnText}
