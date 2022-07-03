@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 export default function Navbar(props) {
   return (
@@ -7,9 +8,9 @@ export default function Navbar(props) {
       className={`navbar navbar-expand-lg bg-${props.modes} navbar-${props.modes} shadow-sm`}
     >
       <div className="container-fluid">
-        <a className="navbar-brand" href="/">
+        <Link className="navbar-brand" to="/">
           {props.title}
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -24,19 +25,25 @@ export default function Navbar(props) {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/">
+              <Link className="nav-link active" to="/">
                 {props.home}
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">
+              <Link className="nav-link" to="/textform">
+                {props.txtForm}
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link className="nav-link" to="/about">
                 {props.about}
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">
+              <Link className="nav-link" to="/contact">
                 {props.contact}
-              </a>
+              </Link>
             </li>
           </ul>
           <form className="d-flex" role="search">
@@ -66,6 +73,7 @@ export default function Navbar(props) {
 Navbar.propTypes = {
   title: PropTypes.string.isRequired,
   home: PropTypes.string,
+  txtForm: PropTypes.string,
   about: PropTypes.string,
   contact: PropTypes.string,
 };
@@ -73,6 +81,7 @@ Navbar.propTypes = {
 Navbar.defaultProps = {
   title: "promoCodes",
   home: "Home",
+  txtForm: "Text form",
   about: "About",
   contact: "Connect",
 };

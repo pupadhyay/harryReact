@@ -73,7 +73,14 @@ export default function TextForm(props) {
         <div className="col">
           <h6>Word count summary</h6>
           <p>
-            <strong>{text.split(" ").length} </strong>
+            <strong>
+              {
+                text.split(" ").filter((element) => {
+                  return element.length != 0;
+                }).length
+              }{" "}
+            </strong>
+            {/* <strong>{text.split(" ").length} </strong> */}
             words and <strong>{text.length}</strong> characters
           </p>
           <p>
