@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 
-export default function About() {
+export default function About(props) {
   const [themeMode, setThemeMode] = useState({
     backgroundColor: "white",
     color: "black",
     borderColor: "black",
   });
   const [btnText, setBtnText] = useState("Enable dark mode");
-
   const ChangeThemeMode = () => {
     if (themeMode.color === "white") {
       setThemeMode({
@@ -43,7 +42,7 @@ export default function About() {
                   aria-controls="collapseOne"
                   style={themeMode}
                 >
-                  Accordion Item #1
+                  <strong> Accordion Item #1</strong>
                 </button>
               </h2>
               <div
@@ -55,13 +54,7 @@ export default function About() {
                 <div className="accordion-body" style={themeMode}>
                   <strong>This is the first item's accordion body.</strong> It
                   is shown by default, until the collapse plugin adds the
-                  appropriate classes that we use to style each element. These
-                  classes control the overall appearance, as well as the showing
-                  and hiding via CSS transitions. You can modify any of this
-                  with custom CSS or overriding our default variables. It's also
-                  worth noting that just about any HTML can go within the{" "}
-                  <code>.accordion-body</code>, though the transition does limit
-                  overflow.
+                  appropriate classes that we use to style each element.
                 </div>
               </div>
             </div>
@@ -76,7 +69,7 @@ export default function About() {
                   aria-controls="collapseTwo"
                   style={themeMode}
                 >
-                  Accordion Item #2
+                  <strong> Accordion Item #2</strong>
                 </button>
               </h2>
               <div
@@ -88,13 +81,7 @@ export default function About() {
                 <div className="accordion-body" style={themeMode}>
                   <strong>This is the second item's accordion body.</strong> It
                   is hidden by default, until the collapse plugin adds the
-                  appropriate classes that we use to style each element. These
-                  classes control the overall appearance, as well as the showing
-                  and hiding via CSS transitions. You can modify any of this
-                  with custom CSS or overriding our default variables. It's also
-                  worth noting that just about any HTML can go within the{" "}
-                  <code>.accordion-body</code>, though the transition does limit
-                  overflow.
+                  appropriate classes that we use to style each element.
                 </div>
               </div>
             </div>
@@ -109,7 +96,7 @@ export default function About() {
                   aria-controls="collapseThree"
                   style={themeMode}
                 >
-                  Accordion Item #3
+                  <strong>Accordion Item #3</strong>
                 </button>
               </h2>
               <div
@@ -121,13 +108,7 @@ export default function About() {
                 <div className="accordion-body" style={themeMode}>
                   <strong>This is the third item's accordion body.</strong> It
                   is hidden by default, until the collapse plugin adds the
-                  appropriate classes that we use to style each element. These
-                  classes control the overall appearance, as well as the showing
-                  and hiding via CSS transitions. You can modify any of this
-                  with custom CSS or overriding our default variables. It's also
-                  worth noting that just about any HTML can go within the
-                  <code>.accordion-body</code>, though the transition does limit
-                  overflow.
+                  appropriate classes that we use to style each element.
                 </div>
               </div>
             </div>
